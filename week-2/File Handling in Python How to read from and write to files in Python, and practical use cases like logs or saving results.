@@ -1,0 +1,50 @@
+File handling in Python is essential for reading from and writing to files, which is useful for various applications such as logging, saving results, or processing data. Below, I’ll outline the basic methods for file handling, along with practical use cases.
+
+Reading from Files
+To read from a file, you can use the built-in open() function along with methods like .read(), .readline(), or .readlines().
+
+Example: Reading a File
+
+# Open a file in read mode
+with open('example.txt', 'r') as file:
+    content = file.read()  # Reads the entire file
+    print(content)
+Writing to Files
+To write to a file, you can also use the open() function, but in write ('w') or append ('a') mode.
+
+Example: Writing to a File
+
+# Open a file in write mode
+with open('output.txt', 'w') as file:
+    file.write("Hello, World!\n")  # Writes a line to the file
+Practical Use Cases
+Logging:
+
+Use a log file to record events or errors in your application.
+Example:
+import logging
+logging.basicConfig(filename='app.log', level=logging.INFO)
+logging.info('This is an info message.')
+
+2.Saving Results:
+
+After performing calculations, you can save results for future reference.
+Example:
+results = [1, 2, 3, 4, 5]
+with open('results.txt', 'w') as file:
+    for result in results:
+        file.write(f"{result}\n")
+
+3.Data Processing:
+
+Read data from a file, process it, and write the results back.
+Example:
+with open('data.txt', 'r') as infile, open('processed_data.txt', 'w') as outfile:
+    for line in infile:
+        processed_line = line.strip().upper()  # Example processing
+        outfile.write(processed_line + '\n')
+
+Summary
+Use open() to access files, specifying the mode ('r', 'w', 'a').
+Use context managers (with statement) to ensure files are properly closed.
+Practical applications include logging, saving results, and data processing.
