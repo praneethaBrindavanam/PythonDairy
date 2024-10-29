@@ -27,7 +27,7 @@ def traverse(head):
         current = current.next
 
 
-Insertion:
+1.Insertion:
 
 At the beginning:
 def insert_at_beginning(head, data):
@@ -50,9 +50,9 @@ def insert_at_end(head, data):
     return head
 
 
-      3.Deletion:
+    2.Deletion:
 
-    From the beginning:
+From the beginning:
 
 def delete_from_beginning(head):
     if head:
@@ -85,7 +85,7 @@ Prev: Points to the previous node.
 
 
 Basic Operations:
-Traversal:
+1.Traversal:
 
           Forward:
 
